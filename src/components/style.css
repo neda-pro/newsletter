@@ -77,3 +77,86 @@
 .subscription-form button:hover {
   background-image: linear-gradient(90deg, #7d817c, #4a5548);
 }
+
+@media(max-width: 1150px) {
+  .newsletter-card{
+    width: 50rem;
+    height: 30rem;
+  }
+  .newsletter-body-info h1{
+    font-size: 2.5rem;
+  }
+  .newsletter-body-info h2 {
+    font-size: 1rem;
+  }
+}
+
+@media(max-width: 850px) {
+  .newsletter-card{
+    width: 40rem;
+    height: auto ;
+    max-height: 30rem;
+  }
+  .newsletter-body-info h1{
+    font-size: 1.5rem;
+  
+  }
+  .newsletter-body-info h2 {
+    font-size: .9rem;
+  
+  }
+  .update-list-item-wrapper p{
+    font-size: .8rem;
+  }
+  .newsletter-body{
+    justify-content: unset;
+  }
+  .subscription-form{
+    margin-top: 0;
+  }
+  .subscription-form label{ 
+    margin-top: .5rem;
+  }
+  .subscription-form button{ 
+    margin-top: .5rem;
+  }
+  .newsletter-body-info ul {
+    margin-top: 1rem;
+  }
+  .update-list-icon{
+    transform: scale(.7);
+  }
+  .update-list-item-wrapper{
+    gap: .4rem;
+  }
+}
+
+@media(max-width: 680px) {
+
+  .newsletter-card{
+    flex-direction: column-reverse;
+  }
+  .newsletter-body{
+    padding: unset;
+  }
+  .newsletter-card{
+    width: 20rem;
+    height: auto;
+    max-height: unset;
+  }
+  .newsletter-body-info h1{
+    margin-top: 1rem;
+    font-size: 1.5rem;
+  }
+  .newsletter-body-info h2 {
+    font-size: .8rem;
+  }
+  .subscription-form label{ 
+    font-size: .7rem;
+    margin-top: 1rem;
+  }
+  .subscription-form button{ 
+    font-size: .9rem;
+  }
+
+}

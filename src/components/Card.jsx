@@ -12,9 +12,9 @@ export default function Card({ title, description, itemList }) {
             <h2>{description}</h2>
             <ul>
               {itemList.map((item) => {
-                const { text, included } = item;
+                const { text, included, id } = item;
                 return (
-                  <li>
+                  <li key={id}>
                     <UpdateItem text={text} included={included} />
                   </li>
                 );
