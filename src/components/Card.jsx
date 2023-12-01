@@ -2,24 +2,23 @@ import SubscriptionForm from "./SubscriptionForm";
 import UpdateItem from "./UpdateItem";
 import "./style.css";
 
-export default function Card() {
+export default function Card({ title, description, itemList }) {
   return (
     <>
       <div className="newsletter-card">
         <div className="newsletter-body">
           <div className="newsletter-body-info">
-            <h1>Stay Updated!</h1>
-            <h2>join 60,000+ product managers receiving monthly updates on:</h2>
+            <h1>{title}</h1>
+            <h2>{description}</h2>
             <ul>
-              <li>
-                <UpdateItem />
-              </li>
-              <li>
-                <UpdateItem />
-              </li>
-              <li>
-                <UpdateItem />
-              </li>
+              {itemList.map((item) => {
+                const { text, included } = item;
+                return (
+                  <li>
+                    <UpdateItem text={text} included={included} />
+                  </li>
+                );
+              })}
             </ul>
           </div>
           <SubscriptionForm />

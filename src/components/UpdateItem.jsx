@@ -1,12 +1,16 @@
 import "./style.css";
-import { CheckCircle } from "@mui/icons-material";
+import { CheckCircle, Cancel } from "@mui/icons-material";
 
-export default function UpdateItem() {
+export default function UpdateItem({ text, included }) {
   return (
     <>
       <div className="update-list-item-wrapper">
-        <CheckCircle className="update-list-icon" />
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing</p>
+        {included ? (
+          <CheckCircle className="update-list-icon" />
+        ) : (
+          <Cancel className="update-list-icon" style={{ color: "tomato" }} />
+        )}
+        <p>{text}</p>
       </div>
     </>
   );
